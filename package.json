@@ -3,8 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "build:css": "bunx tailwindcss -i ./src/styles/input.css -o ./public/styles.css --minify",
+    "start": "bun run index.ts"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "tailwindcss": "^3.4.0"
   },
   "peerDependencies": {
     "typescript": "^5"

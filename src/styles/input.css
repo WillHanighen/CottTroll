@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-dark-900/80 backdrop-blur-xl border border-white/10;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-purple-400 to-pink-400;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 rounded-full font-semibold text-white bg-gradient-to-r from-primary-500 to-purple-600 
+           shadow-lg shadow-primary-500/30 transition-all duration-300;
+  }
+  
+  .card-glow {
+    @apply relative overflow-hidden rounded-2xl;
+  }
+  
+  .card-glow::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-primary-500 via-purple-500 to-pink-500 rounded-2xl opacity-0 
+           transition-opacity duration-500 blur-sm -z-10;
+  }
+  
+  .card-glow:hover::before {
+    @apply opacity-75;
+  }
+}
+
+@layer utilities {
+  .no-cursor-change {
+    cursor: default !important;
+  }
+  
+  .no-cursor-change * {
+    cursor: default !important;
+  }
+  
+  /* Remove pointer cursor from all interactive elements */
+  .no-cursor-change a,
+  .no-cursor-change button,
+  .no-cursor-change [role="button"],
+  .no-cursor-change input[type="submit"],
+  .no-cursor-change input[type="button"] {
+    cursor: default !important;
+  }
+  
+  .no-cursor-change *:hover {
+    cursor: default !important;
+  }
+}
