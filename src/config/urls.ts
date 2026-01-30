@@ -54,6 +54,9 @@ export const TROLL_URLS: string[] = [
   // Notion
   "https://www.notion.so/logout",
 
+  // Hacker News
+  "https://news.ycombinator.com/logout",
+
   // rickroll em at the end
   "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 ];
