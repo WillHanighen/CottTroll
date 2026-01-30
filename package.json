@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "bun run --watch index.ts",
+    "build": "bun run scripts/build-html.ts",
     "build:css": "bunx tailwindcss -i ./src/styles/input.css -o ./public/styles.css --minify",
     "start": "bun run index.ts"
   },
