@@ -117,8 +117,8 @@ console.log(`
 ║                                                           ║
 ║   ✅ Build Complete!                                      ║
 ║                                                           ║
-║   Output: ${outputPath.padEnd(43)}║
-║   Size:   ${(sizeKb + " KB").padEnd(43)}║
+║   Output: ${outputPath}                               ║
+║   Size:   ${(sizeKb + " KB")}                                        ║
 ║                                                           ║
 ║   This file is fully standalone - just open it in a       ║
 ║   browser or host it anywhere!                            ║
